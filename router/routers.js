@@ -11,6 +11,7 @@ router.post("/sendsms", (req, res) => {
 });
 router.post("/sendquote", (req, res) => {
   const { phone } = req.body;
+  console.log(req.body);
   if (phone) {
     twilioMeth.sendQuote(phone, res);
   }
